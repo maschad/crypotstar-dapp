@@ -17,7 +17,7 @@ contract StarNotary is ERC721 {
     // Implement Task 1 Add a name and symbol properties
     // name: Is a short name to your token
     // symbol: Is a short string like 'USD' -> 'American Dollar'
-    constructor(string _name, string _symbol) public {
+    constructor(string memory _name, string memory _symbol) public {
         name = _name;
         symbol = _symbol;
     }
