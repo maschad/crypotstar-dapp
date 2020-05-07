@@ -6,12 +6,20 @@ import "../node_modules/openzeppelin-solidity/contracts/token/ERC721/ERC721.sol"
 
 // StarNotary Contract declaration inheritance the ERC721 openzeppelin implementation
 contract StarNotary is ERC721 {
-    string name;
-    string symbol;
-
     // Star data
     struct Star {
         string name;
+    }
+
+    // Implement Task 1 Add a name and symbol properties
+    // name: Is a short name to your token
+    // symbol: Is a short string like 'USD' -> 'American Dollar'
+    string public name;
+    string public symbol;
+
+    function addName(string memory _name, string memory _symbol) public {
+        name = _name;
+        symbol = _symbol;
     }
 
     // mapping the Star with the Owner Address
@@ -68,8 +76,8 @@ contract StarNotary is ERC721 {
     function exchangeStars(uint256 _tokenId1, uint256 _tokenId2) public {
         //1. Passing to star tokenId you will need to check if the owner of _tokenId1 or _tokenId2 is the sender
         require(
-            ownerOf(_tokenId1) == msg.sender ||
-                ownerOf(_tokenId2) == msg.sender,
+            ownerOf(_tokenId1) != msg.sender &&
+                ownerOf(_tokenId2) != msg.sender,
             "You can't exchange a Star you don't own"
         );
         //2. You don't have to check for the price of the token (star)
