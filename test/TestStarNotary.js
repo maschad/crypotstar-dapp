@@ -81,7 +81,6 @@ it("can add the star name and star symbol properly", async () => {
 	const name = "NotaryStar";
 	const symbol = "NOS";
 	let instance = await StarNotary.deployed();
-	await instance.addName(name, symbol);
 	assert.equal(await instance.name.call(), name);
 	assert.equal(await instance.symbol.call(), symbol);
 });

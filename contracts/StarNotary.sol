@@ -17,7 +17,7 @@ contract StarNotary is ERC721 {
     string public name;
     string public symbol;
 
-    function addName(string memory _name, string memory _symbol) public {
+    constructor(string memory _name, string memory _symbol) public {
         name = _name;
         symbol = _symbol;
     }
