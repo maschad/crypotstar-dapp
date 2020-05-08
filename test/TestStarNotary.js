@@ -78,8 +78,8 @@ it("lets user2 buy a star and decreases its balance in ether", async () => {
 // Implement Task 2 Add supporting unit tests
 
 it("can add the star name and star symbol properly", async () => {
-	const name = "NotaryStar";
-	const symbol = "NOS";
+	const name = "BlackStarLine";
+	const symbol = "BLK";
 	let instance = await StarNotary.deployed();
 	assert.equal(await instance.name.call(), name);
 	assert.equal(await instance.symbol.call(), symbol);
