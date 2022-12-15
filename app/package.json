@@ -12,7 +12,7 @@
 		"serialize-javascript": ">=3.1.0",
 		"webpack": "^4.43.0",
 		"webpack-cli": "^3.3.12",
-		"webpack-dev-server": "^3.10.3"
+		"webpack-dev-server": "^3.11.3"
 	},
 	"dependencies": {
 		"web3": "^1.8.1"
